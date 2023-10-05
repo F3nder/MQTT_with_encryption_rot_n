@@ -62,12 +62,14 @@ while True:
             except ValueError:
                 print("Wrong encryption!")
 
-            run_once = 1
+        run_once = 1
 
     print("Message: ", end="")
     message = input()
     if len(message) == 0:
         break
+    if message == "change encryption":
+        shift = encryption_number()
 
     encrypted_message = encrypt(message)
     print(encrypted_message)

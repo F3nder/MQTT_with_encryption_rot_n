@@ -16,15 +16,15 @@ def decrypt(text):
     text = text.lower()
     # the decrypted message
     result = ''
-    # Replace each letter in the string with a letter which is 13 positions backwards
+        # Replace each letter in the string with a letter which is 13 positions backwards
     for char in text:
         if char.isalpha():
-            # the new position
+           #    the new position
             position = alphabet.index(char) - shift
             if position < 0:
                 result += alphabet[29 + position]
             else:
-                result += alphabet[position]
+                    result += alphabet[position]
         else:
             result += char
     return result
